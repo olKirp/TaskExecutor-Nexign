@@ -32,7 +32,7 @@ public class TaskWorker implements Runnable {
             Thread.sleep(task.getDuration());
             tasksService.saveTask(task, TaskStatus.FINISHED);
         } catch (InterruptedException e) {
-            logger.error("Exception during execution of task {}", task.getTitle(), e);
+            logger.error("Exception during execution of the task {}", task.getTitle(), e);
             tasksService.saveTask(task, TaskStatus.ERROR);
         }
     }

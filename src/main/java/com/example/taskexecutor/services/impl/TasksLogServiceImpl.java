@@ -32,7 +32,7 @@ public class TasksLogServiceImpl implements TasksLogService {
 
     private TaskLog createLogForTask(Task task) {
         TaskLog log = new TaskLog();
-        log.setTaskId(task.getId());
+        log.setTask(task);
         log.setStatus(task.getStatus());
         return log;
     }

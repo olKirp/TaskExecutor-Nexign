@@ -1,6 +1,5 @@
 package com.example.taskexecutor.utils;
 
-import com.example.taskexecutor.dto.TaskInfoDTO;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,7 +16,7 @@ public class MapperUtils {
         try {
             return mapper.map(source, type);
         } catch (Exception e) {
-            logger.error("Exception during mapping", e);
+            logger.error("Exception during mapping object to type {}", type, e);
             return null;
         }
     }

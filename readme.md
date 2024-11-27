@@ -1,4 +1,4 @@
-#### TaskExecutor #
+## TaskExecutor #
 Приложение читает задачи из топика Kafka и выполняет их, сохраняя логи в базу данных.
 
 Система обеспечивает:
@@ -14,9 +14,9 @@ Spring Boot, Hibernate, PostgreSQL, Docker, Kafka, Liquibase
 
 #### Настройки: #
 
-Количество потоков, выполняющих задачи, а также топик, откуда они считываются, можно указать в файле application.properties.
+Количество потоков, выполняющих задачи, можно указать в файле application.properties в параметре threads.number
 
-Параметры подключения к базе данных (url, username, password) и Kafka (bootstrap-servers) задаются в docker-compose.yaml.
+Параметры подключения к базе данных (url, username, password) и Kafka (bootstrap-servers) задаются в docker-compose.yaml
 
 #### Запуск: #
 

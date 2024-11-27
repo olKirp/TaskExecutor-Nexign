@@ -17,8 +17,9 @@ public class TaskLog {
     @Column(name = "id", nullable = false, updatable = false)
     private Long id;
 
-    @Column(nullable = false)
-    private Long taskId;
+    @ManyToOne
+    @JoinColumn(name="task_id", nullable = false)
+    private Task task;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)

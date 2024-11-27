@@ -4,6 +4,8 @@ import com.example.taskexecutor.enums.TaskStatus;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Entity
 @Table(name = "tasks")
 @Data
@@ -23,5 +25,8 @@ public class Task {
 
     @Column(nullable = false)
     private Long duration;
+
+    @OneToMany(mappedBy="task")
+    private List<TaskLog> taskLogs;
 
 }
